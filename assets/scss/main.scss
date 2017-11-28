@@ -342,7 +342,7 @@ footer {
     animation-duration: 0.4s
 }
 #overlay div {
-     width:300px;
+     width: auto;
      margin: 100px auto;
      text-align:center;
      .snapcode-instruct {
@@ -350,6 +350,10 @@ footer {
        font-size: 1.8rem;
        margin-top: 20px;
        font-weight: 700;
+     }
+     .snapcode {
+       height: 200px;
+       width: 200px;
      }
 }
 //  - - Animation - - //
