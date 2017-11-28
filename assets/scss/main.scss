@@ -1,0 +1,428 @@
+// Jessica is the coolest //
+// - - Variables -- //
+$gray: #60677a;
+
+
+// - - Margin Tool - - //
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+// - - Fonts - - //
+
+
+// - - Styles - - //
+
+
+// - - Global Styles - - //
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+     height:100%;
+     margin:0;
+     padding:0;
+}
+
+// - - Header Styles - - //
+header {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(rgba(44, 62, 80, 0.8),rgba(44, 62, 80, 0.6)), url(../css/img/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  height: 100vh;
+  nav {
+    padding-top: 20px;
+    .nav-login-signup {
+      list-style-type: none;
+      float: right;
+      .nav-item {
+        .nav-link-2 {
+          color: white;
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-family: Raleway;
+          display:inline-block;
+          padding: 12px 16px;
+        }
+      }
+    }
+    .nav-main {
+      list-style-type: none;
+      float: left;
+      overflow: hidden;
+    }
+  }
+  // - - Search Property
+  .nav-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  .message {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 2.2em;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+  .message-2 {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 1.4em;
+    color: rgba(255,255,255, 0.8);
+    margin-top: 6px;
+    letter-spacing: 2px;
+  }
+  input#property-search {
+    height: 60px;
+    font-size: 1.2rem;
+    max-width: 400px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255,255,255, 0.6);
+    text-indent: 20px;
+    color: #ffffff;
+  }
+  input#property-search::-webkit-input-placeholder {
+  					color: rgba(255,255,255, 0.6)!important;
+  					}
+
+  					input:-moz-placeholder { /* Firefox 18- */
+  					color: rgba(255,255,255, 0.6)!important;
+  					}
+
+  					input::-moz-placeholder {  /* Firefox 19+ */
+  					color: rgba(255,255,255, 0.6)!important;
+  					}
+
+  					input:-ms-input-placeholder {
+  					color: rgba(255,255,255, 0.6)!important;
+  					}
+
+  }
+}
+
+// - - How it works styles - - //
+.how-it-works {
+  text-align: center;
+  margin-bottom: 50px;
+  .wrapper {
+
+  }
+}
+// sell-your-house-section //
+.our-sponsors {
+  height: 300px;
+  background: whitesmoke;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 40px;
+  .our-sponsors-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    .entry {
+      color: $gray;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    .entry-slogan {
+      font-size: 1.4rem;
+      color: $gray;
+      margin-bottom: 10px;
+    }
+    .sponsor {
+      margin: 20px 15px;
+    }
+  }
+}
+
+
+// - - Why Choose Us section - - //
+.why-choose-us {
+  text-align: center;
+  margin-bottom: 50px;
+  .wrapper {
+    .why-choose-us-boxes {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding: 5px;
+      :last-of-type {
+        margin-bottom: 80px;
+      }
+      .box2 {
+        flex: auto;
+        text-align: center;
+        background:  #ffffff;
+        color: $gray;
+        height: 300px;
+        border-radius: 5px;
+        max-width: 350px;
+        // border: solid 1px black;
+        margin: 10px;
+        border: solid 2px #000000;
+      }
+    }
+  }
+}
+// - - Contact Us - - //
+.contact-section {
+  width: 100%;
+   iframe {
+     width: 100%;
+     height: 500px;
+   }
+}
+
+
+
+// - - Testimonials section - - //
+.testimonials {
+  text-align: center;
+  margin-bottom: 50px;
+  .wrapper {
+    .testimonial {
+      max-width: 700px;
+      width: 100%;
+      min-height: 100px;
+      background: #ffffff;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+      box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+      overflow: hidden;
+      .profile-img {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        float: left;
+        margin: 15px;
+      }
+      .testimonial-text-container {
+        text-align: left;
+        margin-top: 20px;
+        float: left;
+        .testimonial-user {
+          font-size: 1.4rem;
+          margin-bottom: 2px;
+          color: $gray;
+        }
+        .testimonial-text {
+          max-width: 580px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+// - - Find-Property section - - //
+.find-property {
+  height: 400px;
+  background: linear-gradient(rgba(44, 62, 80, 0.8),rgba(44, 62, 80, 0.6)), url(../css/img/property-search-background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .wrapper {
+    .newsletter {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      .news-title {
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin-bottom: 26px;
+      }
+      input#newsletter-signup {
+        height: 60px;
+        font-size: 1.2rem;
+        max-width: 500px;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background: rgba(255,255,255, 0.6);
+        text-indent: 20px;
+        color: #ffffff;
+      }
+      button#newsletter-register-button {
+        height: 60px;
+        font-size: 1.2rem;
+        max-width: 150px;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: rgba(103,221,171, 1);
+        color: #ffffff;
+        font-weight: 300;
+        margin-left: -5px;
+        &:hover {
+          background: #62d1a2;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+// - - Footer section - - //
+footer {
+  .wrapper {
+    .copyright {
+      float: left;
+      font-size: 1.2rem;
+      padding: 17px 5px;
+      color: $gray;
+    }
+    .social-nav {
+      list-style-type: none;
+      float: right;
+      li {
+        display: inline-block;
+        padding: 12px 5px;
+        .social-nav-link {
+          font-size: 1.8rem;
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+//  - - Snapcode Modal - - //
+#overlay {
+    display: none;
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.6);
+   -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+#overlay div {
+     width:300px;
+     margin: 100px auto;
+     text-align:center;
+     .snapcode-instruct {
+       color: white;
+       font-size: 1.8rem;
+       margin-top: 20px;
+       font-weight: 700;
+     }
+}
+//  - - Animation - - //
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+// - - Reusable Styles - - //
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+//  - - Section Styles - - //
+.section-title {
+  text-transform: uppercase;
+  color: $gray;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  line-height: 1.5em;
+}
+
+.section-break {
+  height: 2px;
+  border-color: rgba(255,255,255,0.4);
+}
+
+// - - Navigation - - //
+.btn-outline {
+  border-radius: 4px;
+  border: solid 2px #ffffff;
+  transition: background 0.4s;
+  &:hover {
+    background: rgba(255,255,255, 0.6);
+  }
+}
+.nav-item {
+  display: inline-block;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: Raleway;
+  display: inline-block;
+  padding: 12px 16px;
+  &:hover {
+    color: black;
+  }
+}
+
+
+// - - Input Styles - - //
+input::-webkit-input-placeholder {
+  color: rgba(255,255,255, 0.6)!important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255, 0.6)!important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(255,255,255, 0.6)!important;
+}
+
+input:-ms-input-placeholder {
+  color: rgba(255,255,255, 0.6)!important;
+}
