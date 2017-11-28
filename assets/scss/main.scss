@@ -458,19 +458,13 @@ input:-ms-input-placeholder {
        position: absolute;
        top: 50%;
        left: 50%;
-       background: #ffffff;
+       background: $gray;
        margin-right: -50%;
        transform: translate(-50%, -50%);
        overflow: hidden;
        border-radius: 5px;
        padding: 20px;
-       .control {
-         margin-bottom: 10px;
-         width: 100%;
-         .input-label {
-
-         }
-         .input {
+       .input {
            height: 40px;
            width: 100%;
            box-sizing: border-box;
@@ -481,7 +475,8 @@ input:-ms-input-placeholder {
            outline: none;
            border-radius: 5px;
            text-indent: 20px;
-         }
+           border: solid 2px $gray;
+           margin-bottom: 10px;
        }
        .login-submit {
          width: 100%;
