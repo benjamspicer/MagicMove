@@ -253,6 +253,10 @@ header {
   background-position: center;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   .wrapper {
     .newsletter {
       text-align: center;
@@ -353,7 +357,7 @@ footer {
      }
      .snapcode {
        height: 200px;
-       width: 200px;
+       width: 200  px;
      }
 }
 //  - - Animation - - //
